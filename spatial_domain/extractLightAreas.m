@@ -19,7 +19,7 @@ function lightRegions = extractLightAreas(grayscaleImage, kernel)
       gMean = mean2(grayscaleImage);
       disp(gMean);
         
-      getLMean = @blockProcess;
+      getLMean = @blockMeanProcess;
       block = blockproc(grayscaleImage, kernel, getLMean);
       lightRegions = block;
     
