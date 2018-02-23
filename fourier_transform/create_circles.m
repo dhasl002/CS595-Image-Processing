@@ -7,7 +7,7 @@ temp = I;
 temp = insertShape(temp,'FilledCircle',[100 100 50],'Color', 'white', 'Opacity', 1);
 subplot(4,4,1);
 imshow(temp);
-%imwrite(temp, 'big_circle.jpg');
+imwrite(temp, 'big_circle.jpg');
 
 
 temp = I;
@@ -15,7 +15,7 @@ temp = insertShape(temp,'FilledCircle',[60 100 20],'Color', 'white', 'Opacity', 
 temp = insertShape(temp,'FilledCircle',[140 100 20],'Color', 'white', 'Opacity', 1);
 subplot(4,4,2);
 imshow(temp);
-%imwrite(temp, 'hor_circles.jpg');
+imwrite(temp, 'hor_circles.jpg');
 
 
 temp = I;
@@ -23,14 +23,14 @@ temp = insertShape(temp,'FilledCircle',[100 60 20],'Color', 'white', 'Opacity', 
 temp = insertShape(temp,'FilledCircle',[100 140 20],'Color', 'white', 'Opacity', 1);
 subplot(4,4,3);
 imshow(temp);
-%imwrite(temp, 'ver_circles.jpg');
+imwrite(temp, 'ver_circles.jpg');
 
 temp = I;
 temp = insertShape(temp,'FilledCircle',[60 60 20],'Color', 'white', 'Opacity', 1);
 temp = insertShape(temp,'FilledCircle',[140 140 20],'Color', 'white', 'Opacity', 1);
 subplot(4,4,4);
 imshow(temp);
-%imwrite(temp, 'diag_circles.jpg');
+imwrite(temp, 'diag_circles.jpg');
 
 temp = I;
 temp = insertShape(temp,'FilledCircle',[60 100 20],'Color', 'white', 'Opacity', 1);
@@ -39,7 +39,7 @@ temp = insertShape(temp,'FilledCircle',[100 60 20],'Color', 'white', 'Opacity', 
 temp = insertShape(temp,'FilledCircle',[100 140 20],'Color', 'white', 'Opacity', 1);
 subplot(4,4,5);
 imshow(temp);
-%imwrite(temp, 'four_circles.jpg');
+imwrite(temp, 'four_circles.jpg');
 
 % Create a logical image of an ellipse with specified
 % semi-major and semi-minor axes, center, and image size.
@@ -59,7 +59,7 @@ ver_ellipse = (rowsInImage - centerY).^2 ./ radiusY^2 ...
 subplot(4,4,6);
 imshow(ver_ellipse) ;
 colormap([0 0 0; 1 1 1]);
-%imwrite(ver_ellipse, 'ver_ellipse.jpg');
+imwrite(ver_ellipse, 'ver_ellipse.jpg');
 
 % horizontal ellipse.
 radiusX = 80;
@@ -71,7 +71,7 @@ hor_ellipse = (rowsInImage - centerY).^2 ./ radiusY^2 ...
 subplot(4,4,7);
 imshow(hor_ellipse) ;
 colormap([0 0 0; 1 1 1]);
-%imwrite(hor_ellipse, 'hor_ellipse.jpg');
+imwrite(hor_ellipse, 'hor_ellipse.jpg');
 saveas(FT, 'FT-images','jpg');
 
 % three horizontal ellipse.

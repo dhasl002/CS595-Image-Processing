@@ -141,5 +141,5 @@ temp(130:150, 30:170) = 1;
 subplot(4,4,15);
 imshow(temp);
 
-saveas(FT, 'FT-images','jpg');
+saveas(FT,'FT-images','jpg');
 cd ..;
