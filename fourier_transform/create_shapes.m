@@ -1,6 +1,5 @@
 I = zeros(200,200);
 disp(size(I));
-cd results;
 
 FT = figure;
 temp = I;
@@ -70,6 +69,12 @@ colormap([0 0 0; 1 1 1]);
 
 
 % three horizontal ellipse.
+temp = I;
+temp = drawEllipse(temp,20,80,[100, 100]);
+temp = drawEllipse(temp,20,80,[50, 100]);
+temp = drawEllipse(temp,20,80,[150, 100]);
+subplot(4,4,16);
+imshow(temp) ;
 % centerX1 = 100;
 % centerY1 = 100;
 % centerX2 = 100;
@@ -141,5 +146,6 @@ temp(130:150, 30:170) = 1;
 subplot(4,4,15);
 imshow(temp);
 
+cd results;
 saveas(FT,'FT-images','jpg');
 cd ..;

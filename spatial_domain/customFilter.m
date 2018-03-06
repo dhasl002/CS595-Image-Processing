@@ -10,6 +10,7 @@ function output = customFilter(grayscale, kernel)
             output(i,j)=sum(temp(:));
         end
     end
+    %Apply averaging filter to reduce ringing
 %     sz = size(output);
 %     output = edgetaper(output,[sz(1)/4, sz(2)/4]);
 end

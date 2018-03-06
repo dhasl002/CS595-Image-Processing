@@ -1,6 +1,6 @@
 IRect = imread('./results/images/hor_rect.jpg');
 FT = figure;
-
+cd results;
 % Rotation 45
 rot = [cos(45) sin(45) 0; -sin(45) cos(45) 0; 0 0 1];
 tform = affine2d(rot);
@@ -34,3 +34,4 @@ ang = angle(ftImage);
 imagesc(ang),title('phase-rot-135-rectangle');
 axis off;
 saveas(FT, 'phase-rot-135-rect','jpg');
+cd ..;
