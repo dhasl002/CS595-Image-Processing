@@ -1,37 +1,40 @@
-fs = 0.08;   %FOR RED CHANNEL
-W = 256;
-H = 128; 
-
-img1 = zeros(128, 256);
-for m = 0 : H-1 
-    for n = 0 : W-1
-        img1(m + 1, n + 1) = sin(2*pi*fs*m);
-    end
-end
-
-fs = 0.16;    %FOR Green CHANNEL
-
-img2 = zeros(128, 256);
-for m = 0 : H-1 
-    for n = 0 : W-1
-        img2(m + 1, n + 1) = sin(2*pi*fs*m);
-    end
-end
-
-fs = 0.01;    %FOR Blue CHANNEL
-
-img3 = zeros(128, 256);
-for m = 0 : H-1 
-    for n = 0 : W-1
-        img3(m + 1, n + 1) = sin(2*pi*fs*m);
-    end
-end
-
-Color=zeros(128,256,3);
-Color(:,:,1)=img1;
-Color(:,:,2)=img2;
-Color(:,:,3)=img3;
-imshow(Color,[]);
+I = imread('../resources/ball.jpeg');
+imGray = rgb2gray(I);
+imwrite(imGray, './results/ball_grayscale.jpg');
+% fs = 0.08;   %FOR RED CHANNEL
+% W = 256;
+% H = 128; 
+% 
+% img1 = zeros(128, 256);
+% for m = 0 : H-1 
+%     for n = 0 : W-1
+%         img1(m + 1, n + 1) = sin(2*pi*fs*m);
+%     end
+% end
+% 
+% fs = 0.16;    %FOR Green CHANNEL
+% 
+% img2 = zeros(128, 256);
+% for m = 0 : H-1 
+%     for n = 0 : W-1
+%         img2(m + 1, n + 1) = sin(2*pi*fs*m);
+%     end
+% end
+% 
+% fs = 0.01;    %FOR Blue CHANNEL
+% 
+% img3 = zeros(128, 256);
+% for m = 0 : H-1 
+%     for n = 0 : W-1
+%         img3(m + 1, n + 1) = sin(2*pi*fs*m);
+%     end
+% end
+% 
+% Color=zeros(128,256,3);
+% Color(:,:,1)=img1;
+% Color(:,:,2)=img2;
+% Color(:,:,3)=img3;
+% imshow(Color,[]);
 
 %     img = zeros(rows, cols);  %demo image
 %     numperiods = 8;

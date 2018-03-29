@@ -3,8 +3,8 @@ I = rgb2gray(I);
 wnr = applyDeblur(I, 9, 0, 0);
 imwrite(wnr, './results/wiener_no_noise.jpg');
 
-n = sum(I(:));
-wnr = applyDeblur(I, 9, n, 10);
+%n = sum(I(:));
+wnr = applyDeblur(I, 9, 0, 10);
 imwrite(wnr, './results/wiener_noise.jpg');
 
 PSF = fspecial('motion', 9, 0);
