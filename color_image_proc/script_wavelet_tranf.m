@@ -8,7 +8,7 @@ saveas(decom2, '2_level_decom','jpg');
 cd ..;
 
 %Reconstruction
-image = idwt2(cA1,cH1,cV1,cD1,'db45');
+image = uint8(idwt2(cA1,cH1,cV1,cD1,'db45'));
 imwrite(image, './results/recons_wavelet.jpg');
 
 
