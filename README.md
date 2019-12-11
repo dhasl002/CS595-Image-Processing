@@ -1,5 +1,5 @@
 # CS595-Image-Processing
 
 ### Authors:
-Rahul Racha
-Devin Haslam
+* Rahul Racha
+* Devin Haslam
